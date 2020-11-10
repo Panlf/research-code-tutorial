@@ -30,7 +30,8 @@ public class CityInfoService {
      * @return
      * @throws JsonProcessingException
      */
-    @Transactional(rollbackFor = Exception.class) //如果注释事务失效
+    //配置了全局事务可以不用该注解
+    //@Transactional(rollbackFor = Exception.class) //如果注释事务失效
     public boolean insert(CityInfo cityInfo) throws JsonProcessingException {
         try {
             // 插入cityInfo

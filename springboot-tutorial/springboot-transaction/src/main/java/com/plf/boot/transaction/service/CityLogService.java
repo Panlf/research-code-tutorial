@@ -13,7 +13,8 @@ public class CityLogService {
     @Resource
     private CityLogMapper cityLogMapper;
 
-    @Transactional(rollbackFor = Exception.class)
+    //已经配置了全局事务不需要此注解
+    //@Transactional(rollbackFor = Exception.class)
     public Long insert(CityLog cityLog){
         return  cityLogMapper.insert(cityLog);
     }
