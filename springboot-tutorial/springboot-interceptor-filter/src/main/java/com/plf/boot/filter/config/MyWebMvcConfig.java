@@ -1,7 +1,7 @@
-package com.plf.tutorial.boot.filter.config;
+package com.plf.boot.filter.config;
 
-import com.plf.tutorial.boot.filter.config.interceptor.MyInterceptor;
-import com.plf.tutorial.boot.filter.config.interceptor.MyInterceptorNext;
+import com.plf.boot.filter.config.interceptor.MyInterceptor;
+import com.plf.boot.filter.config.interceptor.MyInterceptorNext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

@@ -1,4 +1,4 @@
-package com.plf.tutorial.boot.filter.config.interceptor;
+package com.plf.boot.filter.config.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;

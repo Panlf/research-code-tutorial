@@ -1,8 +1,7 @@
-package com.plf.tutorial.boot.filter.config.filter;
+package com.plf.boot.filter.config.filter;
 
-import com.plf.tutorial.boot.filter.utils.IPUtil;
+import com.plf.boot.filter.utils.IPUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

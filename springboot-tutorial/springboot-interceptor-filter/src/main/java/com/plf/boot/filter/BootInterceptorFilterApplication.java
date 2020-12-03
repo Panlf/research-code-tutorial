@@ -1,4 +1,4 @@
-package com.plf.tutorial.boot.filter;
+package com.plf.boot.filter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

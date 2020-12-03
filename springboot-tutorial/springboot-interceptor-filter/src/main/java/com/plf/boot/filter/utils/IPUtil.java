@@ -1,4 +1,4 @@
-package com.plf.tutorial.boot.filter.utils;
+package com.plf.boot.filter.utils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
