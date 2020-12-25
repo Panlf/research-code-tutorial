@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.interceptor.*;
 
 import javax.annotation.Resource;
@@ -28,7 +29,7 @@ public class TransactionAdviceConfig {
      * 如果你添加的是 spring-boot-starter-data-jpa 依赖，框架会默认注入 JpaTransactionManager 实例。
      */
     @Resource
-    private DataSourceTransactionManager dataSourceTransactionManager;
+    private TransactionManager transactionManager;
 
     @Bean
     public TransactionInterceptor txAdvice() {
@@ -74,7 +75,7 @@ public class TransactionAdviceConfig {
         txMap.put("*", requiredTx);
 
         source.setNameMap(txMap);
-        TransactionInterceptor txAdvice = new TransactionInterceptor(dataSourceTransactionManager, source);
+        TransactionInterceptor txAdvice = new TransactionInterceptor(transactionManager, source);
         return txAdvice;
     }
 

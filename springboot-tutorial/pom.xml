@@ -15,6 +15,7 @@
         <module>springboot-interceptor-filter</module>
         <module>springboot-unified-code</module>
         <module>springboot-transaction</module>
+        <module>springboot-mybatis-plugin</module>
     </modules>
 
     <dependencyManagement>
