@@ -12,5 +12,5 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface OrderMapper {
     @Select("select * from c_order where id = #{id}")
-    public Order findById(@Param("id") long id);
+    Order findById(@Param("id") long id);
 }
