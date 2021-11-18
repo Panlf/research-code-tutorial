@@ -33,6 +33,7 @@
 
     <modules>
         <module>springboot-tutorial</module>
+        <module>agent-code-tutorial</module>
     </modules>
 
 

@@ -16,6 +16,7 @@
         <module>springboot-unified-code</module>
         <module>springboot-transaction</module>
         <module>springboot-mybatis-plugin</module>
+        <module>springboot-uploader</module>
     </modules>
 
     <dependencyManagement>
