@@ -17,6 +17,8 @@
         <module>springboot-transaction</module>
         <module>springboot-mybatis-plugin</module>
         <module>springboot-uploader</module>
+        <module>springboot-stream-search</module>
+        <module>springboot-minio</module>
     </modules>
 
     <dependencyManagement>
