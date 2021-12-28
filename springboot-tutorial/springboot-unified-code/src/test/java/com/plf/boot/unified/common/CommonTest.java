@@ -1,5 +1,6 @@
-package com.plf.boot.unified.Common;
+package com.plf.boot.unified.common;
 
+import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -80,5 +81,21 @@ public class CommonTest {
     @DisplayName("参数化测试")
     void paramTest(int a) {
         assertTrue(a > 0 && a < 4);
+    }
+
+    @DisplayName("快速失败")
+    @Test
+    void testFail(){
+        if(1 == 2){
+            fail("测试失败");
+        }
+    }
+
+    @DisplayName("前置条件")
+    @Test
+    void assumptionsTest(){
+        // 前置条件为true 才会往下执行
+        Assumptions.assumeTrue(1==2,"前置条件错误");
+        fail("测试失败");
     }
 }
