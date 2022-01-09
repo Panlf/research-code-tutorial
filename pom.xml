@@ -11,7 +11,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- 重点 -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -35,6 +34,7 @@
         <module>springboot-tutorial</module>
         <module>agent-code-tutorial</module>
         <module>optimize-jdbc-speed</module>
+        <module>log-custom-starter</module>
     </modules>
 
 

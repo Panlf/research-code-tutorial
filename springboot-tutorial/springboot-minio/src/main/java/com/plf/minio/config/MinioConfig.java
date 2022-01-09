@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MinioConfig {
 
+
     @Bean
     public MinioClient minioClient(){
         MinioClient minioClient = MinioClient
