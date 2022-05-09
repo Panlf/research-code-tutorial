@@ -19,6 +19,7 @@
         <module>springboot-uploader</module>
         <module>springboot-stream-search</module>
         <module>springboot-minio</module>
+        <module>springboot-feign</module>
     </modules>
 
     <dependencyManagement>
