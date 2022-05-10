@@ -4,3 +4,6 @@ server:
 spring:
   profiles:
     active: dev
+
+enable:
+  scheduling: false
