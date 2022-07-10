@@ -35,6 +35,7 @@
         <module>agent-code-tutorial</module>
         <module>optimize-jdbc-speed</module>
         <module>log-custom-starter</module>
+        <module>common-code-tutorial</module>
     </modules>
 
 
