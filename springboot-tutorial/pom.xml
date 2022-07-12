@@ -20,6 +20,7 @@
         <module>springboot-stream-search</module>
         <module>springboot-minio</module>
         <module>springboot-feign</module>
+        <module>springboot-strategy</module>
     </modules>
 
     <dependencyManagement>
