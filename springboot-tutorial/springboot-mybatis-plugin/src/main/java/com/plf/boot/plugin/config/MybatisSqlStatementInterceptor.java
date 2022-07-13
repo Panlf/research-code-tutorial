@@ -46,7 +46,8 @@ public class MybatisSqlStatementInterceptor implements Interceptor {
         Object parameterObject = boundSql.getParameterObject();
 
         if (parameterMappingList.isEmpty() && parameterObject == null) {
-           log.info(("parameterMappings is empty or parameterObject is null"));
+            log.info(("parameterMappings is empty or parameterObject is null"));
+            log.info("无参数的SQL:{}",sql);
             return invocation.proceed();
         }
 

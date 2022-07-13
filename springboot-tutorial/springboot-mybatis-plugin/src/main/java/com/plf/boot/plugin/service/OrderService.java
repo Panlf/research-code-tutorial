@@ -5,6 +5,7 @@ import com.plf.boot.plugin.mapper.OrderMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author panlf
@@ -17,5 +18,9 @@ public class OrderService {
 
     public Order findById(long id){
         return orderMapper.findById(id);
+    }
+
+    public List<Order> selectAll(){
+        return orderMapper.selectAll();
     }
 }

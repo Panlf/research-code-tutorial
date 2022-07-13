@@ -17,8 +17,9 @@ public class MyBatisConfig {
 	public ConfigurationCustomizer myBatisConfigurationCustomizer() {
 		return configuration -> {
 			if(sqlWithParam) {
-				log.info("MyBatisConfig 注册 MybatisSqlStatementInterceptor");
+				log.info("MyBatisConfig 注册 Interceptor");
 				configuration.addInterceptor(new MybatisSqlStatementInterceptor());
+				configuration.addInterceptor(new MyBatisFullTableSearchInterceptor());
 			}
 		};
 	}
