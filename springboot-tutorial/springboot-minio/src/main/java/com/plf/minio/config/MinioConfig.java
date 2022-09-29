@@ -11,13 +11,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MinioConfig {
 
-
     @Bean
     public MinioClient minioClient(){
-        MinioClient minioClient = MinioClient
-                .builder().endpoint("http://192.168.164.130:9000")
-                .credentials("admin","12345678").build();
-
-        return minioClient;
+        return MinioClient
+                .builder()
+                .endpoint("http://192.168.164.130:9000")
+                .credentials("admin","12345678")
+                .build();
     }
 }
