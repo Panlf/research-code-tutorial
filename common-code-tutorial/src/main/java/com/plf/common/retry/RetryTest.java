@@ -19,7 +19,8 @@ public class RetryTest {
         System.out.println(result.get());*/
 
         Retryer<Integer> retryer = RetryerBuilder.<Integer>newBuilder()
-                .retryIfRuntimeException()
+                .retryIfExceptionOfType(AccessException.class)
+                //.retryIfRuntimeException()
                 .withWaitStrategy(WaitStrategies.incrementingWait(2, TimeUnit.SECONDS, 2, TimeUnit.SECONDS))
                 .withStopStrategy(StopStrategies.stopAfterAttempt(6))
                 .build();
@@ -31,11 +32,12 @@ public class RetryTest {
         }
     }
 
-    public static Integer getCount(){
+    public static Integer getCount() throws AccessException {
        int r = random.nextInt(10) ;
        if(r<=5){
-           System.out.println("请求数据失败");
-            throw new RuntimeException("不符合要求");
+            System.out.println("请求数据失败");
+            //throw new RuntimeException("不符合要求");
+           throw new AccessException("没权限啊");
         }
         return r;
     }

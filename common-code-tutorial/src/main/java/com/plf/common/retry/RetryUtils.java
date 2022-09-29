@@ -1,7 +1,5 @@
 package com.plf.common.retry;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Optional;
 import java.util.function.Supplier;
 
