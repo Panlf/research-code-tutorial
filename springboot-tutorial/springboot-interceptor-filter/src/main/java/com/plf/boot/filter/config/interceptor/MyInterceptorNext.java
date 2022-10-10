@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 public class MyInterceptorNext implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        throw new RuntimeException("Test XX Test");
+        //log.info("MyInterceptorNext.preHandle");
 
-        log.info("MyInterceptorNext.preHandle");
-
-        return true;
+       // return true;
     }
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {

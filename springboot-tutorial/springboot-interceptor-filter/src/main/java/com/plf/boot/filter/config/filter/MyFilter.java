@@ -2,6 +2,7 @@ package com.plf.boot.filter.config.filter;
 
 import com.plf.boot.filter.utils.IPUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +14,7 @@ import java.io.IOException;
  * 自定义拦截器
  * 基于函数回调
  */
-//@Component
+@Component
 @Slf4j
 public class MyFilter implements Filter {
 
@@ -52,7 +53,8 @@ public class MyFilter implements Filter {
         log.info("获取访问的当前的URI:{}",uri);
         log.info("获取访问的当前的IP:{}",ip);
 
-
+        //throw new RuntimeException("No Permission");
+        //response.getWriter().print("No Permission");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
