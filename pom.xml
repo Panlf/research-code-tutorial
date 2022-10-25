@@ -36,6 +36,7 @@
         <module>optimize-jdbc-speed</module>
         <module>log-custom-starter</module>
         <module>common-code-tutorial</module>
+        <module>spi-tutorial</module>
     </modules>
 
 

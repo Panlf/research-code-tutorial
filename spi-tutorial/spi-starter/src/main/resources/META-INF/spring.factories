@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfigurtion=com.plf.spi.Starter
+org.springframework.boot.autoconfigure.EnableAutoConfigurtion1=com.plf.spi.Starter
