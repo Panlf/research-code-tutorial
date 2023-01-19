@@ -21,6 +21,7 @@
         <module>springboot-minio</module>
         <module>springboot-feign</module>
         <module>springboot-strategy</module>
+        <module>springboot-disruptor</module>
     </modules>
 
     <dependencyManagement>
