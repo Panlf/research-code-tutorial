@@ -87,6 +87,5 @@ public class TransactionAdviceConfig {
         pointcut.setExpression(AOP_POINTCUT_EXPRESSION);
         /*设置切面=切点pointcut+通知TxAdvice**/
         return new DefaultPointcutAdvisor(pointcut, txAdvice());
-
     }
 }

@@ -19,12 +19,7 @@ public class CityInfoController {
     @GetMapping("insert")
     public Boolean insert(CityInfo cityInfo){
         try{
-            Boolean b = cityInfoManualService.insert(cityInfo);
-            if(b){
-                return true;
-            }else {
-                return false;
-            }
+            return cityInfoManualService.insert(cityInfo);
         }catch (Exception e){
             return false;
         }
@@ -33,12 +28,7 @@ public class CityInfoController {
     @GetMapping("insertAuto")
     public Boolean insertAutoTransaction(CityInfo cityInfo){
         try{
-            Boolean b = cityInfoService.insert(cityInfo);
-            if(b){
-                return true;
-            }else {
-                return false;
-            }
+            return cityInfoService.insert(cityInfo);
         }catch (Exception e){
             return false;
         }
