@@ -3,6 +3,8 @@ server:
 
 
 feign:
+  httpclient:
+    enabled: true
   client:
     config:
       ## default 设置的全局超时时间，指定服务名称可以设置单个服务的超时时间
@@ -12,4 +14,5 @@ feign:
 
 logging:
   level:
+    root: info
     com.plf.feign.client.service: debug
