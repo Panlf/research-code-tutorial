@@ -2,6 +2,7 @@ package com.plf.feign.client.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author panlf
@@ -12,6 +13,9 @@ public interface FeignResourceApi {
 
     @GetMapping("/resource/getResourceInfo")
     String getResourceInfo();
+
+    @GetMapping("/resource/getResourceWithParams/{params}")
+    String getResourceWithParams(@PathVariable(value = "params") String params);
 
     @GetMapping("/resource/getDelayResourceInfo")
     String getDelayResourceInfo();
