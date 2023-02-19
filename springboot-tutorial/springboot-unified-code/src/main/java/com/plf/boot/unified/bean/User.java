@@ -5,6 +5,7 @@ import com.plf.boot.unified.bean.group.UpdateUserGroup;
 import com.plf.boot.unified.customize.validator.Password;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -12,6 +13,7 @@ import javax.validation.constraints.Size;
 
 @Data
 @ApiModel(value = "user实体类",description = "用户对象")
+@Builder
 public class User {
 
     /**

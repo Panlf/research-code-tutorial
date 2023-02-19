@@ -19,10 +19,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 public class Knife4jConfiguration {
     @Bean(value = "knife4jApi2")
     public Docket knife4jApi2() {
-        Docket docket=new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
                         .description("Swagger UI")
-                        .termsOfServiceUrl("http://www.xx.com/")
+                        .termsOfServiceUrl("http://localhost:9000/doc.html")
                         .contact(new Contact("plf","","liangfeng_pan@163.com"))
                         .version("1.0.0")
                         .build())
@@ -33,6 +33,5 @@ public class Knife4jConfiguration {
                 .apis(RequestHandlerSelectors.basePackage("com.plf.boot.unified.controller"))
                 .paths(PathSelectors.any())
                 .build();
-        return docket;
     }
 }

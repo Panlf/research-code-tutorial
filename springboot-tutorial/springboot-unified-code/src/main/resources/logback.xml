@@ -89,7 +89,7 @@
     <!-- 2.3 level为 WARN 日志，时间滚动输出  -->
     <appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 正在记录的日志文档的路径及文档名 -->
-        <file>${log.path}/edu_warn.log</file>
+        <file>${log.path}/warn.log</file>
         <!--日志文档输出格式-->
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
@@ -168,8 +168,8 @@
     <!-- 4. 最终的策略 -->
     <!-- 4.1 开发环境:打印控制台-->
     <springProfile name="dev">
-        <logger name="com.plf.boot.unified" level="debug"/>
-        <root level="debug">
+        <logger name="com.plf.boot.unified" level="info"/>
+        <root level="info">
             <appender-ref ref="CONSOLE" />
         </root>
     </springProfile>

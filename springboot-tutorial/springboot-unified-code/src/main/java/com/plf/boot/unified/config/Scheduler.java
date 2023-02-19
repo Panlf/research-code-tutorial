@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProc
 import org.springframework.scheduling.config.TaskManagementConfigUtils;
 
 /**
+ * 是否启用SpringBoot的定时功能
  * @author panlf
  * @date 2022/5/10
  */
