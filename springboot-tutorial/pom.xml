@@ -22,6 +22,7 @@
         <module>springboot-feign</module>
         <module>springboot-strategy</module>
         <module>springboot-disruptor</module>
+        <module>springboot-security-jwt</module>
     </modules>
 
     <dependencyManagement>
