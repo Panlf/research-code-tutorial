@@ -5,6 +5,7 @@ import lombok.Getter;
 @Getter
 public enum ResultCodeEnum {
     SUCCESS(true,200,"成功"),
+    REQUEST_FORBBIDEN(false,400,"黑名单，无法访问"),
     ERROR(false,500,"失败"),
     UNKNOWN_ERROR(false,600,"未知错误"),
     PARAM_ERROR(false,601,"参数错误"),
