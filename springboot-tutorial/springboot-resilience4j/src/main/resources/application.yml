@@ -1,0 +1,25 @@
+resilience4j: # resilience4j的配置开始，用于增加服务弹性的库
+  retry:      # 重试机制的配置
+    instances: # 定义多个重试策略实例
+      retryApi: # 第一个重试实例的名称
+        max-attempts: 5 # 当操作失败时，最大尝试次数为5次
+        wait-duration: 1s # 每次重试之间的等待时间为1秒
+
+  circuitbreaker: # 断路器模式配置开始，断路器模式可以防止对不稳定或失败的服务的连续调用
+    instances:
+      circuitBreakerApi: # 第一个断路器实例的名称
+        register-health-indicator: true # 是否将断路器的状态注册为健康检查指标
+        sliding-window-size: 10 # 用于计算失败率的滑动窗口大小为10
+        permitted-number-of-calls-in-half-open-state: 3 # 当断路器处于半开状态时，允许的最大调用次数为3次
+        sliding-window-type: TIME_BASED # 滑动窗口的类型是基于时间的  COUNT_BASED
+        minimum-number-of-calls: 5 # 在断路器开始计算失败率之前，至少需要调用次数为5次
+        failure-rate-threshold: 20 # 当失败率达到20%时，断路器就会打开，阻止进一步调用
+        event-consumer-buffer-size: 10 # 用于存储断路器相关事件的缓冲区大小为10
+
+
+  ratelimiter: #限流机制的配置，用于防止过多的请求涌入系统
+    instances:
+      ratelimitApi: # 第一个限流策略实例的名称
+        limit-for-period: 2 # 在一个特定的时间周期内，允许的最大请求数量为1
+        limit-refresh-period: 1s # 时间周期长度为1s，即每秒会重置请求计数
+        timeout-duration: 100ms # 当请求超过限制时，客户端应立即收到超时的响应，而不等待处理
