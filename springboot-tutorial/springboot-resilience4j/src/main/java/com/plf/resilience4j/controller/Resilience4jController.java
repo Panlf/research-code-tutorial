@@ -47,9 +47,9 @@ public class Resilience4jController {
     }
 
 
-    public ResponseEntity fallback(Throwable e){
+    public ResponseEntity<String> fallback(Throwable e){
         log.error("fallback exception , {}",e.getMessage());
-        return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("您请求过于频繁，稍后再试",HttpStatus.OK);
     }
 
 }
