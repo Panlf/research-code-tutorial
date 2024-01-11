@@ -21,6 +21,10 @@ public abstract class AbstractHandler<T> {
         return nextHandler != null;
     }
 
-
+    /**
+     * 业务处理方法
+     * @param t 传入参数
+     * @return
+     */
     public abstract T process(T t);
 }
