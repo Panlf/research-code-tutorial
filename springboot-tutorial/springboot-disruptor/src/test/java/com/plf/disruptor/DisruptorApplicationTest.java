@@ -2,10 +2,8 @@ package com.plf.disruptor;
 
 import com.plf.disruptor.service.DisruptorMessageService;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
@@ -14,7 +12,6 @@ import javax.annotation.Resource;
  * @date 2023/1/19
  */
 @Slf4j
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = DisruptorApplication.class)
 public class DisruptorApplicationTest {
 
