@@ -5,7 +5,7 @@
     <parent>
         <artifactId>research-code-tutorial</artifactId>
         <groupId>com.plf</groupId>
-        <version>0.0.1</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,7 +15,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.25</version>
+            <version>8.0.33</version>
         </dependency>
     </dependencies>
 </project>

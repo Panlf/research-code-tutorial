@@ -6,6 +6,9 @@ spring:
       discovery:
         namespace: public
         server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        password: nacos
+        username: nacos
       config:
         server-addr: localhost:8848
         file-extension: yml

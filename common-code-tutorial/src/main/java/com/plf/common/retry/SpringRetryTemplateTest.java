@@ -16,10 +16,10 @@ public class SpringRetryTemplateTest {
     /**
      * 表示哪些异常需要重试,key表示异常的字节码,value为true表示需要重试
      */
-    private static final Map<Class<? extends Throwable>, Boolean> exceptionMap = new HashMap<>();
+    private static final Map<Class<? extends Throwable>, Boolean> EXCEPTION_MAP = new HashMap<>();
 
     public static void main(String[] args) throws AccessException {
-        exceptionMap.put(AccessException.class,true);
+        EXCEPTION_MAP.put(AccessException.class,true);
 
         // 构建重试模板实例
         RetryTemplate retryTemplate = new RetryTemplate();
@@ -40,7 +40,7 @@ public class SpringRetryTemplateTest {
         int maxRetryTimes = 3;
 
         // 设置重试策略，主要设置重试次数
-        SimpleRetryPolicy retryPolicy = new SimpleRetryPolicy(maxRetryTimes, exceptionMap);
+        SimpleRetryPolicy retryPolicy = new SimpleRetryPolicy(maxRetryTimes, EXCEPTION_MAP);
 
         retryTemplate.setRetryPolicy(retryPolicy);
         retryTemplate.setBackOffPolicy(backOffPolicy);

@@ -6,7 +6,7 @@
 
     <groupId>com.plf</groupId>
     <artifactId>research-code-tutorial</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.8.24</version>
+            <version>5.8.25</version>
         </dependency>
     </dependencies>
 
@@ -38,7 +38,5 @@
         <module>common-code-tutorial</module>
         <module>spi-tutorial</module>
     </modules>
-
-
 
 </project>
